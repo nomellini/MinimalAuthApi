@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\MinimalAuthApi\\AuthApi\\AuthApi.csproj": {}
+    "E:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\AuthApi.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\MinimalAuthApi\\AuthApi\\AuthApi.csproj": {
+    "E:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\AuthApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\MinimalAuthApi\\AuthApi\\AuthApi.csproj",
+        "projectUniqueName": "E:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\AuthApi.csproj",
         "projectName": "AuthApi",
-        "projectPath": "D:\\Projetos\\MinimalAuthApi\\AuthApi\\AuthApi.csproj",
-        "packagesPath": "C:\\Users\\ferna\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\MinimalAuthApi\\AuthApi\\obj\\",
+        "projectPath": "E:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\AuthApi.csproj",
+        "packagesPath": "C:\\Users\\fernando\\.nuget\\packages\\",
+        "outputPath": "E:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ferna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fernando\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,10 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "E:\\NugetLocal": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.dtm.com.br/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
