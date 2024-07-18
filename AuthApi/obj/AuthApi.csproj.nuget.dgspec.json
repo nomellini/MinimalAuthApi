@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\AuthApi.csproj": {}
+    "D:\\Projetos\\MinimalAuthApi\\AuthApi\\AuthApi.csproj": {}
   },
   "projects": {
-    "E:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\AuthApi.csproj": {
+    "D:\\Projetos\\MinimalAuthApi\\AuthApi\\AuthApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\AuthApi.csproj",
+        "projectUniqueName": "D:\\Projetos\\MinimalAuthApi\\AuthApi\\AuthApi.csproj",
         "projectName": "AuthApi",
-        "projectPath": "E:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\AuthApi.csproj",
-        "packagesPath": "C:\\Users\\fernando\\.nuget\\packages\\",
-        "outputPath": "E:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\obj\\",
+        "projectPath": "D:\\Projetos\\MinimalAuthApi\\AuthApi\\AuthApi.csproj",
+        "packagesPath": "C:\\Users\\ferna\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\MinimalAuthApi\\AuthApi\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\fernando\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ferna\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,10 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "E:\\NugetLocal": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.dtm.com.br/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -67,6 +60,10 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [

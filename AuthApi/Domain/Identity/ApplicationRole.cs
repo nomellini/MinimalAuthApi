@@ -2,7 +2,7 @@
 
 namespace AuthApi.Domain.Identity
 {
-    public class ApplicationRole: IdentityRole<int>
+    public class ApplicationRole: IdentityRole<string>
     {
         public List<ApplicationUserRole>? UserRoles { get; set; }
     }
