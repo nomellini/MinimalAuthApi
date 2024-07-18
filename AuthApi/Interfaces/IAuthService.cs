@@ -1,4 +1,5 @@
-﻿using AuthApi.Domain.Dto.Auth;
+﻿using AuthApi.Domain.Dto;
+using AuthApi.Domain.Dto.Auth;
 
 namespace AuthApi.Interfaces
 {
@@ -6,7 +7,7 @@ namespace AuthApi.Interfaces
     {
         Task<String> Register(RegistrationRequestDto registrationRequestDto);
         Task<LoginResponseDto> Login(LoginRequestDto loginRequestDto);
-        Task<bool> AssignRole(string email, string roleName);
+        Task<ResponseDto> AssignRole(string email, string roleName);
         List<ApplicationUserDto> GetUsers();
     }
 }

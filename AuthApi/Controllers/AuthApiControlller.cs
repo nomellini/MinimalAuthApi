@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AuthApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class AuthApiController : ControllerBase
     {
@@ -56,7 +56,7 @@ namespace AuthApi.Controllers
         {
 
             var assignRole = await _authService.AssignRole(model.Email!, model.Role!);
-            if (!assignRole)
+            if (!assignRole.IsSuccess)
             {
                 _response.IsSuccess = false;
                 _response.Message = "Erro ao negociar o papel";

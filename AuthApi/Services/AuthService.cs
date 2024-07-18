@@ -1,4 +1,6 @@
-﻿using AuthApi.Domain.Dto.Auth;
+﻿using AuthApi.Domain.Dto;
+using AuthApi.Domain.Dto.Auth;
+using AuthApi.Domain.Entities;
 using AuthApi.Domain.Identity;
 using AuthApi.Interfaces;
 using AuthApi.Repository;
@@ -27,20 +29,34 @@ namespace AuthApi.Services
             this._db = db;
         }
 
-        public async Task<bool> AssignRole(string email, string roleName)
+        public async Task<ResponseDto> AssignRole(string email, string roleName)
         {
+            ResponseDto response = new ResponseDto();
+
             ApplicationUser? user =
                 _db.Users.FirstOrDefault(u =>
                     u.Email!.ToLower() == email.ToLower());
 
-            if (user == null) return false;
+            if (user == null)
+            {
+                response.IsSuccess = false;
+                response.Message = "Tenant não encontrado";
+                return response;
+            }
+
 
 
             if (!_roleManager.RoleExistsAsync(roleName.ToUpper()).GetAwaiter().GetResult())
                 _roleManager.CreateAsync(new IdentityRole(roleName)).GetAwaiter().GetResult();
 
-            await _userManager.AddToRoleAsync(user, roleName.ToUpper());
-            return true;
+            var result =  await _userManager.AddToRoleAsync(user, roleName.ToUpper());
+            if (result.Succeeded) { 
+                response.IsSuccess = true;                
+            } else
+            {
+                response.IsSuccess = false;                
+            }
+            return response;
 
         }
 

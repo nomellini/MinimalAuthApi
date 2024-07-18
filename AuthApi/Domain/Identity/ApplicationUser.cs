@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using AuthApi.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace AuthApi.Domain.Identity
 {
@@ -6,5 +7,6 @@ namespace AuthApi.Domain.Identity
     {
         public string? FullName { get; set; } = default!;
 
+        public string? TenantId { get; set; }
     }
 }
