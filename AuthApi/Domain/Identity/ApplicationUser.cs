@@ -2,10 +2,9 @@
 
 namespace AuthApi.Domain.Identity
 {
-    public class ApplicationUser: IdentityUser<string>
+    public class ApplicationUser: IdentityUser
     {
         public string? FullName { get; set; } = default!;
 
-        public List<ApplicationUserRole>? UserRoles { get; set; }
     }
 }

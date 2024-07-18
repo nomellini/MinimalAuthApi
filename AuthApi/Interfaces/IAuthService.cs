@@ -1,6 +1,12 @@
-﻿namespace AuthApi.Interfaces
+﻿using AuthApi.Domain.Dto.Auth;
+
+namespace AuthApi.Interfaces
 {
     public interface IAuthService
     {
+        Task<String> Register(RegistrationRequestDto registrationRequestDto);
+        Task<LoginResponseDto> Login(LoginRequestDto loginRequestDto);
+        Task<bool> AssignRole(string email, string roleName);
+        List<ApplicationUserDto> GetUsers();
     }
 }
