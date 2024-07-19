@@ -20,4 +20,8 @@ app.UseSwaggerUI();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+
+SeedData.Seed(app);
+
 app.Run();
+
