@@ -12,11 +12,13 @@ namespace AuthApi.Controllers
     {
 
         private readonly IAuthService _authService;
+        private readonly IUserService _userService;
         protected ResponseDto _response;
 
-        public AuthApiController(IAuthService authService)
+        public AuthApiController(IAuthService authService, IUserService userService)
         {
             _authService = authService;
+            _userService = userService;
             _response = new();
         }
 
@@ -71,7 +73,7 @@ namespace AuthApi.Controllers
         [Authorize(Roles = "system-admin")]
         public async Task<IActionResult> Users()
         {
-            var lista = await _authService.GetUsers(true);
+            var lista = await _userService.GetUsers(true);
             return Ok(lista);
         }
 

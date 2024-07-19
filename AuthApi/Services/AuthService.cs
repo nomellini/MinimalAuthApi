@@ -17,14 +17,16 @@ namespace AuthApi.Services
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IJwtTokenGenerator _jwtTokenGenerator;
-
+        private readonly IUserService _userService;
 
         public AuthService(ApplicationDbContext db,
             IJwtTokenGenerator jwtTokenGenerator,
+            IUserService userService,
             UserManager<ApplicationUser> userManager,
             RoleManager<IdentityRole> roleManager)
         {
             this._jwtTokenGenerator = jwtTokenGenerator;
+            this._userService = userService;
             this._userManager = userManager;
             this._roleManager = roleManager;
             this._db = db;
@@ -59,30 +61,6 @@ namespace AuthApi.Services
             }
             return response;
 
-        }
-
-        public async Task<List<ApplicationUserDto>> GetUsers(bool withRoles = false)
-        {
-            var users = await _db.Users.ToListAsync();            
-
-            //var users = _userManager.Users.ToList();
-
-            List<ApplicationUserDto> result = new List<ApplicationUserDto>();
-            foreach (var user in users)
-            {
-                var userDto = new ApplicationUserDto()
-                {
-                    UserName = user.Id,
-                    Email = user.Email,
-                    FullName = user.FullName,
-                };
-                if (withRoles)
-                {
-                    userDto.Roles = await _userManager.GetRolesAsync(user); 
-                }
-                result.Add(userDto); 
-            }
-            return result;
         }
 
         public async Task<LoginResponseDto> Login(LoginRequestDto loginRequestDto)

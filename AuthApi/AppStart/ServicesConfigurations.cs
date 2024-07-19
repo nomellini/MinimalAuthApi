@@ -7,6 +7,7 @@ namespace AuthApi.AppStart
     {
         internal static void ConfigureServices(WebApplicationBuilder builder)
         {
+            builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<ITenantService, TenantService>();
         }
