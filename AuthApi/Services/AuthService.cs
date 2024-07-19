@@ -5,6 +5,7 @@ using AuthApi.Domain.Identity;
 using AuthApi.Interfaces;
 using AuthApi.Repository;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 
 namespace AuthApi.Services
@@ -60,16 +61,22 @@ namespace AuthApi.Services
 
         }
 
-        public List<ApplicationUserDto> GetUsers()
+        public async Task<List<ApplicationUserDto>> GetUsers()
         {
-            var users = _db.Users.ToList();
+            var users = await _db.Users.ToListAsync();            
+
+            //var users = _userManager.Users.ToList();
+
             List<ApplicationUserDto> result = new List<ApplicationUserDto>();
             foreach (var user in users)
             {
                 result.Add(new ApplicationUserDto()
                 {
+                    UserName = user.Id,
+                    Email = user.Email,
                     FullName = user.FullName,
-                });
+                    Roles = await _userManager.GetRolesAsync(user)
+            }); 
             }
             return result;
         }
@@ -119,7 +126,7 @@ namespace AuthApi.Services
             {
                 UserName = registrationRequestDto.Email,
                 Email = registrationRequestDto.Email,
-                NormalizedEmail = registrationRequestDto.Email.ToUpper(),
+                NormalizedEmail = registrationRequestDto.Email?.ToUpper(),
                 FullName = registrationRequestDto.FullName
             };
 

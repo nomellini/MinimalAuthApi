@@ -71,7 +71,7 @@ namespace AuthApi.Controllers
         [Authorize(Roles = "system-admin")]
         public async Task<IActionResult> Users()
         {
-            var lista = _authService.GetUsers();
+            var lista = await _authService.GetUsers();
             return Ok(lista);
         }
 
