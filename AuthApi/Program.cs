@@ -2,6 +2,7 @@ using AuthApi.AppStart;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllersWithViews();
 
 IdentityConfigurations.ConfigureServices(builder);
 AuthentcationConfiguration.ConfigureServices(builder);

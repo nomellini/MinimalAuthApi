@@ -7,5 +7,9 @@
         public string? FullName { get; set; }
 
         public IList<string>? Roles { get; set; }
+        public ApplicationUserDto()
+        {
+            Roles = new List<string>();
+        }
     }
 }

@@ -61,7 +61,7 @@ namespace AuthApi.Services
 
         }
 
-        public async Task<List<ApplicationUserDto>> GetUsers()
+        public async Task<List<ApplicationUserDto>> GetUsers(bool withRoles = false)
         {
             var users = await _db.Users.ToListAsync();            
 
@@ -70,13 +70,17 @@ namespace AuthApi.Services
             List<ApplicationUserDto> result = new List<ApplicationUserDto>();
             foreach (var user in users)
             {
-                result.Add(new ApplicationUserDto()
+                var userDto = new ApplicationUserDto()
                 {
                     UserName = user.Id,
                     Email = user.Email,
                     FullName = user.FullName,
-                    Roles = await _userManager.GetRolesAsync(user)
-            }); 
+                };
+                if (withRoles)
+                {
+                    userDto.Roles = await _userManager.GetRolesAsync(user); 
+                }
+                result.Add(userDto); 
             }
             return result;
         }

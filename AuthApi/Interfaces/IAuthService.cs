@@ -8,6 +8,6 @@ namespace AuthApi.Interfaces
         Task<String> Register(RegistrationRequestDto registrationRequestDto);
         Task<LoginResponseDto> Login(LoginRequestDto loginRequestDto);
         Task<ResponseDto> AssignRole(string email, string roleName);
-        Task<List<ApplicationUserDto>> GetUsers();
+        Task<List<ApplicationUserDto>> GetUsers(bool withRoles = false);
     }
 }
