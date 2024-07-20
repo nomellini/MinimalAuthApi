@@ -118,3 +118,6 @@ D:\Projetos\MinimalAuthApi\AuthApi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Wo
 D:\Projetos\MinimalAuthApi\AuthApi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Projetos\MinimalAuthApi\AuthApi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Projetos\MinimalAuthApi\AuthApi\obj\Debug\net8.0\AuthApi.MvcApplicationPartsAssemblyInfo.cs
+D:\Projetos\MinimalAuthApi\AuthApi\bin\Debug\net8.0\AuthApi.staticwebassets.runtime.json
+D:\Projetos\MinimalAuthApi\AuthApi\obj\Debug\net8.0\AuthApi.RazorAssemblyInfo.cache
+D:\Projetos\MinimalAuthApi\AuthApi\obj\Debug\net8.0\AuthApi.RazorAssemblyInfo.cs

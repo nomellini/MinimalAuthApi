@@ -1,3 +1,4 @@
+
 using AuthApi.AppStart;
 
 var builder = WebApplication.CreateBuilder(args);
