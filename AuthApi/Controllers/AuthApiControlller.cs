@@ -3,6 +3,10 @@ using AuthApi.Domain.Dto;
 using AuthApi.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 
 namespace AuthApi.Controllers
 {
@@ -49,11 +53,13 @@ namespace AuthApi.Controllers
             }
             _response.Result = loginResponse;
 
+
+
             return Ok(_response);
         }
 
         [HttpPost("AssignRole")]
-
+        [Authorize(Roles = "system-admin")]
         public async Task<IActionResult> AssignRole([FromBody] RegistrationRequestDto model)
         {
 
@@ -76,6 +82,7 @@ namespace AuthApi.Controllers
             var lista = await _userService.GetUsers(true);
             return Ok(lista);
         }
+
 
     }
 }

@@ -15,11 +15,11 @@ namespace AuthApi.AppStart
 
             builder.Services.AddIdentityCore<ApplicationUser>(op =>
             {
-                op.Password.RequireDigit = false;
-                op.Password.RequireNonAlphanumeric = false;
-                op.Password.RequireLowercase = false;
-                op.Password.RequireUppercase = false;
-                op.Password.RequiredLength = 4;
+                op.Password.RequireDigit = true;
+                op.Password.RequireNonAlphanumeric = true;
+                op.Password.RequireLowercase = true;
+                op.Password.RequireUppercase = true;
+                op.Password.RequiredLength = 8;
             });
 
 

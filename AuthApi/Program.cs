@@ -1,10 +1,12 @@
 
 using AuthApi.AppStart;
+using Microsoft.OpenApi.MicrosoftExtensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddHttpContextAccessor();
 IdentityConfigurations.ConfigureServices(builder);
 AuthentcationConfiguration.ConfigureServices(builder);
 ServicesConfigurations.ConfigureServices(builder);
