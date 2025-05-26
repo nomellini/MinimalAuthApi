@@ -49,3 +49,5 @@ namespace AuthApi.Services
         }
     }
 }
+
+// dotnet user-secrets set "JwtOptions:Secret" "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDPQKKR4XJ3yfrPAyvxX56WeaI0gGfqvOYmcBtyv9aAzwcOj8meuIWhUCpfDL+OP6Cy1/izAJuKrPdOrD1lZF+1FO/zxuvPXZLylioWQfcLncqVzVEp2H/NgmWq3inLgPC0XJA5yTc+nbOaWJX3w0SGcTwggLfcRybZVoEMYGMm18wO5MZxjleBfc0CHUfg/4GQ5qK8poqTHjw/6/oNjrQsjoXyzJa2fRU2E0mkXDm/RTbIOu0Gbm7E6pb2GWKkkDsIHR36gx42YI9m1+6XG9RFO7AwVCoZOV"

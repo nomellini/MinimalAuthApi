@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\AuthApi.csproj": {}
+    "G:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\AuthApi.csproj": {}
   },
   "projects": {
-    "E:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\AuthApi.csproj": {
+    "G:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\AuthApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\AuthApi.csproj",
+        "projectUniqueName": "G:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\AuthApi.csproj",
         "projectName": "AuthApi",
-        "projectPath": "E:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\AuthApi.csproj",
+        "projectPath": "G:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\AuthApi.csproj",
         "packagesPath": "C:\\Users\\fernando\\.nuget\\packages\\",
-        "outputPath": "E:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\obj\\",
+        "outputPath": "G:\\FrontEndDevelopment\\ApsNetCore\\MinimalAuthApi\\AuthApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,10 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "E:\\NugetLocal": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.dtm.com.br/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -46,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -106,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
