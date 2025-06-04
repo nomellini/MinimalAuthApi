@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthApi", "AuthApi\AuthApi.csproj", "{FB4A0608-5F45-48DC-BE2A-82AA41C914C4}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthApi.Tests", "AuthApi.Tests\AuthApi.Tests.csproj", "{F3851EC5-4F28-45D1-9E91-B4CD7FDED90C}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{30E7F864-3739-4178-994E-A684CC87059D}"
 	ProjectSection(SolutionItems) = preProject
 		AuthApi\docker-compose.yml = AuthApi\docker-compose.yml
@@ -19,8 +21,12 @@ Global
 		{FB4A0608-5F45-48DC-BE2A-82AA41C914C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FB4A0608-5F45-48DC-BE2A-82AA41C914C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB4A0608-5F45-48DC-BE2A-82AA41C914C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB4A0608-5F45-48DC-BE2A-82AA41C914C4}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
+                {FB4A0608-5F45-48DC-BE2A-82AA41C914C4}.Release|Any CPU.Build.0 = Release|Any CPU
+                {F3851EC5-4F28-45D1-9E91-B4CD7FDED90C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+                {F3851EC5-4F28-45D1-9E91-B4CD7FDED90C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+                {F3851EC5-4F28-45D1-9E91-B4CD7FDED90C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+                {F3851EC5-4F28-45D1-9E91-B4CD7FDED90C}.Release|Any CPU.Build.0 = Release|Any CPU
+        EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
