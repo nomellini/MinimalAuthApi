@@ -69,9 +69,8 @@ namespace AuthApi.Controllers
             {
                 var result = await _authService.Login(loginDto);
                 token = result.Token!;
-                loginDto.UserName = result.Token!;
-                
-                //_tokenProvider.SetToken(token);
+
+                _tokenProvider.SetToken(token);
             
                 await SignInUser(result);
 
